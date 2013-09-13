@@ -24,5 +24,5 @@ $('.element').plugin({
 ```
 <h1>usage example</h1>
 ```javascript
-$('.scibble').squiggle();
+$('.scribble').squiggle();
 ```
