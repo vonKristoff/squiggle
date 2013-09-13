@@ -1,0 +1,30 @@
+{
+    "name": "$",
+    "title": "$",
+    "description": "$",
+    "keywords": [
+        "canvas",
+        "text",
+        "effect",
+        "jquery",
+        "spline",
+        "hide"
+    ],
+    "version": "0.1.0",
+    "author": {
+        "name": "vonKristoff",
+        "url": "http://bite-software.co.uk"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://opensource.org/licenses/MIT"
+        }
+    ],
+    "homepage": "http://bite-software.co.uk/$",
+    "docs": "https://github.com/vonKristoff/$",
+    "download": "https://github.com/vonKristoff/$/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.8.1"
+    }
+}
