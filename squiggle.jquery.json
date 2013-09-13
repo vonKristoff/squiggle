@@ -23,7 +23,7 @@
     ],
     "homepage": "http://bite-software.co.uk/squiggle",
     "docs": "https://github.com/vonKristoff/squiggle",
-    "download": "https://github.com/vonKristoff/$/archive/master.zip",
+    "download": "https://github.com/vonKristoff/squiggle/archive/master.zip",
     "dependencies": {
         "jquery": ">=1.8.1"
     }
