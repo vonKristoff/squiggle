@@ -4,7 +4,7 @@
 *
 * @author Jean-Christophe Nicolas <mrjcnicolas@gmail.com>
 * @homepage http://bite-software.co.uk/squiggle/
-* @version 0.1.0
+* @version 0.2.0
 * @license MIT http://opensource.org/licenses/MIT
 * @date 2013-09-13
 */
@@ -28,8 +28,6 @@ var Plugin = function(self,options){
 	}
 	$.extend(this.config,options);
 
-	console.log(this.config.thickness);
-
 	this.el = self;
 	this.points = [];
 	
@@ -50,7 +48,7 @@ Plugin.prototype.init = function(){
 	this.padding = this.cHeight * 0.2;
 	
 	this.thickness = (!this.config.thickness)? ~~(this.padding*.8) : this.config.thickness;
-	console.log(this.thickness);
+	
 	this.canvas = this.buildCanvas();
 
 	this.buildSpline();

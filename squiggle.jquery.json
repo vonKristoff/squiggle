@@ -8,9 +8,9 @@
         "effect",
         "jquery",
         "spline",
-        "hide"
+        "glitch"
     ],
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": {
         "name": "vonKristoff",
         "url": "http://bite-software.co.uk"
