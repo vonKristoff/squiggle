@@ -23,7 +23,8 @@ var Plugin = function(self,options){
 
 	this.config = {	
 		intensity:30,
-		thickness:false
+		thickness:false,
+		color:false
 	}
 	$.extend(this.config,options);
 
@@ -37,9 +38,9 @@ var Plugin = function(self,options){
 
 Plugin.prototype.init = function(){
 
-	this.cWidth = parseInt(this.el.css('width')) * 2.25;
+	this.cWidth = parseInt(this.el.css('width')) * 2.27;
 	this.cHeight = parseInt(this.el.css('font-size'));
-	this.colour = this.el.css('color');
+	this.colour = (this.config.color)? this.config.color : this.el.css('color');
 
 	this.el.css({
 		'text-shadow':'none'
@@ -48,7 +49,7 @@ Plugin.prototype.init = function(){
 	this.step = this.cWidth/this.config.intensity;
 	this.padding = this.cHeight * 0.2;
 	
-	this.thickness = (!this.config.thickness)? ~~(this.padding) : this.config.thickness;
+	this.thickness = (!this.config.thickness)? ~~(this.padding*.8) : this.config.thickness;
 	console.log(this.thickness);
 	this.canvas = this.buildCanvas();
 

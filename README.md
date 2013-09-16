@@ -9,20 +9,22 @@ BASIC USAGE:
 ```javascript
 $('.element').plugin({
 	intensity:50,
-	thickness:3
+	thickness:3,
+	color:'#333'
 });
 ```
 <h1>config options:</h1>
 
-| Option      | data type   | values        | Required 						| Nb.                						  | 
-| ------------|-------------|---------------|-------------------------------|---------------------------------------------|
-| intensity   | int         | 0 -> infinity	| No - defaults to 30   		| How intense the squiggle is				  |       
-| thickness   | int        	| 1 -> ?        | No -> default is auto mode    | Auto mode will figure out a good thickness based on your font-size |              
+| Option      | data type   | values        | Required 							| Nb.                						  | 
+| ------------|-------------|---------------|-----------------------------------|---------------------------------------------|
+| intensity   | int         | 0 -> infinity	| No - defaults to 30   			| How intense the squiggle is				  |       
+| thickness   | int        	| 1 -> ?        | No -> default is auto mode    	| Auto mode will figure out a good thickness based on your font-size |
+| color  	  | string		| hex / rgb		| No -> defaults to colour of text 	| squiggle will sit behind the text not on top |        
 <h1>HTML setup</h1>
 ```html
 <p>Lorem ipsum dolor sit amet, <span class='scribble'>consectetur</span> adipiscing elit.</p>
 ```
 <h1>usage example</h1>
 ```javascript
-$('.scribble').squiggle();
+$('.scribble').squiggle({intensity:60});
 ```
