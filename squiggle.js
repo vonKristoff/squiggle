@@ -4,7 +4,7 @@
 *
 * @author Jean-Christophe Nicolas <mrjcnicolas@gmail.com>
 * @homepage http://bite-software.co.uk/squiggle/
-* @version 0.2.0
+* @version 0.3.0
 * @license MIT http://opensource.org/licenses/MIT
 * @date 2013-09-13
 */
