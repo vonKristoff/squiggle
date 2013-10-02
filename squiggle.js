@@ -4,7 +4,7 @@
 *
 * @author Jean-Christophe Nicolas <mrjcnicolas@gmail.com>
 * @homepage http://bite-software.co.uk/squiggle/
-* @version 0.3.0
+* @version 0.4.0
 * @license MIT http://opensource.org/licenses/MIT
 * @date 2013-09-13
 */
@@ -14,7 +14,6 @@ $.fn.squiggle = function(options){
 	
 	var el = $(this),
 		process = new Plugin(el,options);
-
 			
 	return this.el;	
 }
@@ -24,7 +23,8 @@ var Plugin = function(self,options){
 	this.config = {	
 		intensity:30,
 		thickness:false,
-		color:false
+		color:false,
+		hover:false
 	}
 	$.extend(this.config,options);
 
@@ -32,6 +32,17 @@ var Plugin = function(self,options){
 	this.points = [];
 	
 	this.init();
+
+	if(this.hover){
+		$this = this;
+
+		this.el.on('mouseover',function(){
+			$this.hideSquiggle();
+		})
+		this.el.on('mouseout',function(){
+			$this.showSquiggle();
+		})
+	}
 }
 
 Plugin.prototype.init = function(){
@@ -102,15 +113,25 @@ Plugin.prototype.buildSpline = function(){
 
 Plugin.prototype.addSquiggle = function(){
 
-	var img = this.convertCanvasToImage(this.canvas);
+	this.bg = this.convertCanvasToImage(this.canvas);
 
 	this.el.css({
 		'display':'inline',
-		'background':'url('+ img +') repeat-x'
+		'background':'url('+ this.bg +') repeat-x'
 	})
 
 }
-
+Plugin.prototype.showSquiggle = function(){
+	this.el.css({
+		'display':'inline',
+		'background':'url('+ this.bg +') repeat-x'
+	})
+}
+Plugin.prototype.hideSquiggle = function(){
+	this.el.css({
+		'background':'transparent'
+	})
+}
 Plugin.prototype.convertCanvasToImage = function(canvas) {
 	
 	var image = new Image();
