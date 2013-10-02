@@ -33,7 +33,7 @@ var Plugin = function(self,options){
 	
 	this.init();
 
-	if(this.hover){
+	if(this.config.hover){
 		$this = this;
 
 		this.el.on('mouseover',function(){
