@@ -7,7 +7,7 @@ This jQuery plugin will generate a HTML5 Canvas made png to draw a 'squiggle' ov
 
 BASIC USAGE:
 ```javascript
-$('.element').plugin({
+$('.element').squiggle({
 	intensity:50,
 	thickness:3,
 	color:'#333',
